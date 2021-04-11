@@ -4,6 +4,7 @@ import club.jiajiajia.springcloud.common.entities.CommonResult;
 import club.jiajiajia.springcloud.common.entities.Payment;
 import club.jiajiajia.springcloud.payment.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -20,6 +21,9 @@ public class PaymentController {
 
     @Resource
     private PaymentService paymentService;
+
+    @Value("${server.port}")
+    private String port;
 
     @PostMapping(value = "/payment/create")
     public CommonResult create(@RequestBody Payment payment){
@@ -38,7 +42,7 @@ public class PaymentController {
         log.info("*****查询结果："+payment);
         //说明有数据，能查询成功
         if (payment!=null){
-            return new CommonResult(200,"查询成功",payment);
+            return new CommonResult(200,"查询成功 port:"+port,payment);
         }else {
             return new CommonResult(444,"没有对应记录，查询ID："+id,null);
         }

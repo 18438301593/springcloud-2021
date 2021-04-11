@@ -2,6 +2,7 @@ package club.jiajiajia.springcloud.payment;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * @ClassName PaymentApplication
@@ -10,8 +11,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Description TODO
  **/
 @SpringBootApplication
-public class PaymentApplication {
+@EnableEurekaClient
+public class PaymentApplication_8002 {
     public static void main(String[] args){
-        SpringApplication.run(PaymentApplication.class,args);
+        SpringApplication.run(PaymentApplication_8002.class,args);
     }
 }
