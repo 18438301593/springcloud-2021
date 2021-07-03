@@ -10,8 +10,8 @@
     <modules>
         <module>springcloud-provider</module>
         <module>springcloud-common</module>
-        <module>springcloud-consumer-order-80</module>
         <module>springcloud-eureka-server</module>
+        <module>springcloud-consumer</module>
     </modules>
     <packaging>pom</packaging>
 
