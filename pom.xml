@@ -12,6 +12,9 @@
         <module>springcloud-common</module>
         <module>springcloud-eureka-server</module>
         <module>springcloud-consumer</module>
+        <module>springcloud-openfeign</module>
+        <module>springcloud-hystrix</module>
+        <module>springcloud-gateway</module>
     </modules>
     <packaging>pom</packaging>
 

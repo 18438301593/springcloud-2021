@@ -23,4 +23,17 @@ public class CommonResult <T>{
     public CommonResult(Integer code,String message){
         this(code,message,null);
     }
+    public static <T> CommonResult ok(T data){
+        CommonResult commonResult = new CommonResult();
+        commonResult.setData(data);
+        commonResult.setCode(0);
+        commonResult.setMessage("success");
+        return commonResult;
+    }
+    public static <T> CommonResult err(int code,String message){
+        CommonResult commonResult = new CommonResult();
+        commonResult.setCode(code);
+        commonResult.setMessage(message);
+        return commonResult;
+    }
 }

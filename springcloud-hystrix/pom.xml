@@ -7,20 +7,18 @@
         <groupId>club.jiajiajia.springcloud</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <packaging>pom</packaging>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springcloud-consumer</artifactId>
+    <artifactId>springcloud-hystrix</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>springcloud-provider-zookeeper-hystirx-8005</module>
+        <module>springcloud-consumer-zookeeper-hystirx-8085</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
-
-    <modules>
-        <module>springcloud-consumer-order-80</module>
-        <module>springcloud-consumer-order-zookeeper-8081</module>
-        <module>springcloud-consumer-order-zookeeper-openfeign-8082</module>
-    </modules>
 
 </project>

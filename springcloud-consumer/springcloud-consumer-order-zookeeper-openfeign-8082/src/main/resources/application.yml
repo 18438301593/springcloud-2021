@@ -1,0 +1,9 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: springcloud-consumer-order-zookeeper-8082
+  cloud:
+    zookeeper:
+      connect-string: 192.168.159.131:2181

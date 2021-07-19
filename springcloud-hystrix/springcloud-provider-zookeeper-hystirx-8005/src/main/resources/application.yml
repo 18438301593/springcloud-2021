@@ -1,0 +1,9 @@
+server:
+  port: 8005
+
+spring:
+  application:
+    name: springcloud-provider-zookeeper-hystirx-8005
+  cloud:
+    zookeeper:
+      connect-string: 192.168.159.128:2181

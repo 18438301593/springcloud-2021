@@ -7,20 +7,24 @@
         <groupId>club.jiajiajia.springcloud</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <packaging>pom</packaging>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springcloud-consumer</artifactId>
+    <artifactId>springcloud-openfeign</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
-
-    <modules>
-        <module>springcloud-consumer-order-80</module>
-        <module>springcloud-consumer-order-zookeeper-8081</module>
-        <module>springcloud-consumer-order-zookeeper-openfeign-8082</module>
-    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>club.jiajiajia.springcloud</groupId>
+            <artifactId>springcloud-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
